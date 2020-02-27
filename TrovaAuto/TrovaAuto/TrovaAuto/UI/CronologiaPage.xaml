@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:local="clr-namespace:TrovaAuto.Converters"
+             mc:Ignorable="d"
+             x:Class="TrovaAuto.UI.CronologiaPage" Title="Cronologia">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ByteToImageSourceConverter x:Key="bytetoImage"></local:ByteToImageSourceConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <gradient:SfGradientView>
+                <gradient:SfGradientView.BackgroundBrush>
+                    <gradient:SfLinearGradientBrush>
+                        <gradient:SfLinearGradientBrush.GradientStops>
+                            <gradient:SfGradientStop Color="#8b4513" Offset="0.0" />
+                            <gradient:SfGradientStop Color="#DAA520" Offset="1.0" />
+                        </gradient:SfLinearGradientBrush.GradientStops>
+                    </gradient:SfLinearGradientBrush>
+                </gradient:SfGradientView.BackgroundBrush>
+            </gradient:SfGradientView>
+            
+            <ListView x:Name="listaPosizioni" ItemsSource="{Binding Posizioni}" HasUnevenRows="True" ItemSelected="listaPosizioni_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                            <Frame HeightRequest="50" BackgroundColor="#987654" CornerRadius="10" Margin="3,3">
+                            <!--<Label Text="OK"></Label>-->
+                            <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                
+                                    <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2">
+                                        <Label TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:dd MMMM yyyy}'}" FontSize="Medium" FontAttributes="Bold"></Label>
+                                        <Label FontSize="Small" TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:hh:mm}'}"></Label>
+                                    </StackLayout>
+                                    <Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

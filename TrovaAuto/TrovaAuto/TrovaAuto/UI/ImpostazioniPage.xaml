@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+             x:Class="TrovaAuto.UI.ImpostazioniPage" Title="Impostazioni">
+    <ContentPage.Content>
+        <Grid>
+            <gradient:SfGradientView>
+                <gradient:SfGradientView.BackgroundBrush>
+                    <gradient:SfLinearGradientBrush>
+                        <gradient:SfLinearGradientBrush.GradientStops>
+                            <gradient:SfGradientStop Color="#8b4513" Offset="0.0" />
+                            <gradient:SfGradientStop Color="#DAA520" Offset="1.0" />
+                        </gradient:SfLinearGradientBrush.GradientStops>
+                    </gradient:SfLinearGradientBrush>
+                </gradient:SfGradientView.BackgroundBrush>
+            </gradient:SfGradientView>
+            
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal" Margin="20,20">
+                    <CheckBox x:Name="checkBoxConFoto" Color="White"></CheckBox>
+                    <Label Text="Acquisizione con foto in allegato" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Italic"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="20,20">
+                    <Button x:Name="buttonPulisciAcquisizioni" Text="Pulisci posizioni acquisite" Clicked="buttonPulisciAcquisizioni_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Button>
+                </StackLayout>
+                <!--<StackLayout Orientation="Horizontal" Margin="20,20">
+                    <CheckBox x:Name="checkBoxConTimer" Color="White"></CheckBox>
+                    <Label Text="Acquisizione con timer" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Italic"></Label>
+                </StackLayout>-->
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

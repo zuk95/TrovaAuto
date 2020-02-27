@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ImmaginiCondivise\car.png" />
+    <None Remove="ImmaginiCondivise\cari.png" />
+    <None Remove="ImmaginiCondivise\carimage.png" />
+    <None Remove="ImmaginiCondivise\gpsi.png" />
+    <None Remove="ImmaginiCondivise\gpsImage.jpg" />
+    <None Remove="ImmaginiCondivise\gpsimage.png" />
+    <None Remove="ImmaginiCondivise\noimage.png" />
+    <None Remove="ImmaginiCondivise\posizioneimage.png" />
+    <None Remove="ImmaginiCondivise\settings.png" />
+    <None Remove="ImmaginiCondivise\succesimage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ImmaginiCondivise\cari.png" />
+    <EmbeddedResource Include="ImmaginiCondivise\noimage.png" />
+    <EmbeddedResource Include="ImmaginiCondivise\posizioneimage.png" />
+    <EmbeddedResource Include="ImmaginiCondivise\settings.png" />
+    <EmbeddedResource Include="ImmaginiCondivise\succesimage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.4.0.51" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.4.0" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.4.0.991640" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="UI\AppPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\CronologiaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\ImmaginePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\ImpostazioniPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\MappaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\SuccessoPagina.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

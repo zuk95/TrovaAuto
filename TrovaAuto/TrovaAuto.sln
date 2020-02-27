@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrovaAuto.Android", "TrovaAuto\TrovaAuto.Android\TrovaAuto.Android.csproj", "{A50A4F9D-8703-4E50-9963-7A4B02E87BF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrovaAuto", "TrovaAuto\TrovaAuto\TrovaAuto.csproj", "{EC43EF31-DFF4-4804-A311-220F89E2C39C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A50A4F9D-8703-4E50-9963-7A4B02E87BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50A4F9D-8703-4E50-9963-7A4B02E87BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50A4F9D-8703-4E50-9963-7A4B02E87BF3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A50A4F9D-8703-4E50-9963-7A4B02E87BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50A4F9D-8703-4E50-9963-7A4B02E87BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A50A4F9D-8703-4E50-9963-7A4B02E87BF3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EC43EF31-DFF4-4804-A311-220F89E2C39C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC43EF31-DFF4-4804-A311-220F89E2C39C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC43EF31-DFF4-4804-A311-220F89E2C39C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EC43EF31-DFF4-4804-A311-220F89E2C39C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC43EF31-DFF4-4804-A311-220F89E2C39C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC43EF31-DFF4-4804-A311-220F89E2C39C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B428C732-35DD-442F-BFC2-308F7D379B87}
+	EndGlobalSection
+EndGlobal
