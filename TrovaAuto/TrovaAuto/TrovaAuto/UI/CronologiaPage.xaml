@@ -24,12 +24,37 @@
                     </gradient:SfLinearGradientBrush>
                 </gradient:SfGradientView.BackgroundBrush>
             </gradient:SfGradientView>
-            
-            <ListView x:Name="listaPosizioni" ItemsSource="{Binding Posizioni}" HasUnevenRows="True" ItemSelected="listaPosizioni_ItemSelected">
+
+            <StackLayout Orientation="Vertical">
+
+                <Frame x:Name="ultimaPosizioneFrame" BorderColor="#DAA520" HeightRequest="200" BackgroundColor="#987654" CornerRadius="3" Margin="0,0,0,10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ultimaPosizioneFrame"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <ActivityIndicator x:Name="indicatore" Color="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1"></ActivityIndicator>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2">
+                            <Label FontSize="Large" FontAttributes="Bold" TextColor="#DAA520" Text="Ultima posizione"></Label>
+                            <Label TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:dd MMMM yyyy  hh:mm}'}" FontSize="Medium" FontAttributes="Bold"></Label>
+                            <Label FontSize="Small" TextColor="White" Text="{Binding NomeCitta}"></Label>
+                            <Label FontSize="Small" TextColor="White" Text="{Binding Via}"></Label>
+                        </StackLayout>
+                        <Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>
+                    </Grid>
+                </Frame>
+
+                <ListView x:Name="listaPosizioni" ItemsSource="{Binding Posizioni}" HasUnevenRows="True" ItemTapped="listaPosizioni_ItemTapped" CachingStrategy="RecycleElement" Margin="5,0,5,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                            <Frame HeightRequest="50" BackgroundColor="#987654" CornerRadius="10" Margin="3,3">
+                            <Frame HeightRequest="75" BackgroundColor="#987654" CornerRadius="10" Margin="0,5,0,5">
                             <!--<Label Text="OK"></Label>-->
                             <Grid>
                                     <Grid.ColumnDefinitions>
@@ -39,8 +64,9 @@
                                     </Grid.ColumnDefinitions>
                                 
                                     <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2">
-                                        <Label TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:dd MMMM yyyy}'}" FontSize="Medium" FontAttributes="Bold"></Label>
-                                        <Label FontSize="Small" TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:hh:mm}'}"></Label>
+                                        <Label TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:dd MMMM yyyy  hh:mm}'}" FontSize="Medium" FontAttributes="Bold"></Label>
+                                        <Label FontSize="Small" TextColor="White" Text="{Binding NomeCitta}"></Label>
+                                        <Label FontSize="Small" TextColor="White" Text="{Binding Via}"></Label>
                                     </StackLayout>
                                     <Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>
                             </Grid>
@@ -50,6 +76,8 @@
             </ListView.ItemTemplate>
         </ListView>
 
+            </StackLayout>
         </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

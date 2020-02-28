@@ -15,12 +15,22 @@ namespace TrovaAuto.UI
     {
         private ImpostazioniDatabase database;
         private Impostazioni impostazioni;
+        private readonly List<int> listaNumeroAcquisizione;
 
         public ImpostazioniPage()
         {
             InitializeComponent();
-
             database = new ImpostazioniDatabase();
+            listaNumeroAcquisizione = new List<int>();
+            InizializzaPickerAcquisizioni();
+        }
+
+        private void InizializzaPickerAcquisizioni()
+        {
+            for (int i = 1; i <= CostantiDominio.MASSIME_ACQUISIZIONI_POSSIBILI; i++)
+                listaNumeroAcquisizione.Add(i);
+
+            pickerNumeroAcquisizioniDaTenere.ItemsSource = listaNumeroAcquisizione;
         }
 
         protected async override void OnAppearing()
@@ -37,6 +47,7 @@ namespace TrovaAuto.UI
                 }
                 impostazioni = tmp[0];
                 checkBoxConFoto.IsChecked = impostazioni.AcquisizioneConFoto;
+                pickerNumeroAcquisizioniDaTenere.SelectedIndex = (impostazioni.NumeroAcquisizioniMassimo - 1);
                 //checkBoxConTimer.IsChecked = impostazioni.AcquisizioneConTimer;
             }
             catch (Exception ex)
@@ -52,7 +63,7 @@ namespace TrovaAuto.UI
             try
             {
                 impostazioni.AcquisizioneConFoto = checkBoxConFoto.IsChecked;
-                //impostazioni.AcquisizioneConTimer = checkBoxConTimer.IsChecked;
+                impostazioni.NumeroAcquisizioniMassimo = Convert.ToInt32( pickerNumeroAcquisizioniDaTenere.SelectedItem);
                 await database.SalvaImpostazioniAsync(impostazioni);
             }
             catch (Exception ex)

@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 
@@ -19,6 +18,13 @@ namespace TrovaAuto.Dominio
                 p.Latitudine = location.Latitude;
                 p.Longitudine = location.Longitude;
                 p.DataAcquisizione = DateTime.Now;
+                var placemarks = await Geocoding.GetPlacemarksAsync(p.Latitudine, p.Longitudine);
+                var placemark = placemarks?.FirstOrDefault();
+                if(placemark != null)
+                {
+                    p.NomeCitta = placemark.Locality;
+                    p.Via = placemark.Thoroughfare + " " + placemark.SubThoroughfare;
+                }
                 return p;
             }
             catch (Exception ex)

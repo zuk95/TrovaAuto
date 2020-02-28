@@ -10,6 +10,7 @@ namespace TrovaAuto.Dominio
         [PrimaryKey]
         public int IdImpostazione { get; set; }
         public bool AcquisizioneConFoto { get; set; }
+        public int NumeroAcquisizioniMassimo { get; set; }
         //public bool AcquisizioneConTimer { get; set; }
 
     }

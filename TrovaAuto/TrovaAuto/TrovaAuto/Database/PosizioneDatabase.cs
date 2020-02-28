@@ -45,6 +45,19 @@ namespace TrovaAuto.Database
             }
             else
             {
+                /*ImpostazioniDatabase impostazionidatabase = new ImpostazioniDatabase();
+                Impostazioni impostazioni = impostazionidatabase.GetImpostazioniAsync().Result[0];
+
+                int limiteNumeroPosizioni = impostazioni.NumeroAcquisizioniMassimo;
+                int numeroPosizioni = this.GetCountPosizioni().Result[0];
+                int scarto = numeroPosizioni - limiteNumeroPosizioni;
+
+                if(scarto > 0)
+                {
+
+                }*/
+
+                this.DeleteFirstRowsAsync().Wait();
                 return Database.InsertAsync(posizione);
             }
         }
@@ -58,6 +71,18 @@ namespace TrovaAuto.Database
         {
             return Database.DeleteAllAsync<Posizione>();
         }
+
+        private Task<int> DeleteFirstRowsAsync()
+        {
+            ImpostazioniDatabase impostazionidatabase = new ImpostazioniDatabase();
+            Impostazioni impostazioni = impostazionidatabase.GetImpostazioniAsync().Result[0];
+            return Database.ExecuteAsync($"DELETE FROM [Posizione] where Id NOT IN (select Id FROM [Posizione] ORDER BY Id LIMIT {(impostazioni.NumeroAcquisizioniMassimo - 1)})");
+        }
+
+        /*public Task<List<int>> GetCountPosizioni()
+        {
+            return Database.QueryAsync<int>("SELECT COUNT(*) FROM [Posizione]");
+        }*/
 
     }
 }

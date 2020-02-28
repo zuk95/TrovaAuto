@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TrovaAuto.Database;
 using TrovaAuto.Dominio;
 using Xamarin.Forms;
@@ -20,35 +18,67 @@ namespace TrovaAuto.UI
         {
             InitializeComponent();
             Posizioni = new ObservableCollection<Posizione>();
+
+            InizializzaLista();
         }
 
-        protected async override void OnAppearing()
+        private async void InizializzaLista()
         {
-            base.OnAppearing();
-
             PosizioneDatabase db = new PosizioneDatabase();
             List<Posizione> list = await db.GetPosizioniAsync();
+
+            if(list.Count == 0)
+            {
+                return;
+            }
+
             list = list.OrderByDescending(x => x.Id).ToList();
             foreach (Posizione item in list)
             {
                 Posizioni.Add(item);
             }
 
+            ultimaPosizioneFrame.BindingContext = Posizioni[0];
+            Posizioni.RemoveAt(0);
             listaPosizioni.ItemsSource = Posizioni;
         }
 
-        private async void listaPosizioni_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void listaPosizioni_ItemTapped(object sender, SelectedItemChangedEventArgs e)
         {
             
             try
             {
                 Posizione p = e.SelectedItem as Posizione;
                 await Navigation.PushAsync(new MappaPage(p));
+                if (sender is ListView listView) listView.SelectedItem = null;
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Errore", $"Problema apertura mappa: {ex.Message}", "OK");
             }
         }
+
+        private async void TapGestureRecognizer_Tapped_ultimaPosizioneFrame(object sender, EventArgs e)
+        {
+            indicatore.IsEnabled = true;
+            indicatore.IsRunning = true;
+
+            try
+            {
+                Posizione p = (sender as Frame).BindingContext as Posizione;
+                await Navigation.PushAsync(new MappaPage(p));
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Errore", $"Problema apertura mappa: {ex.Message}", "OK");
+            }
+            finally
+            {
+                indicatore.IsEnabled = false;
+                indicatore.IsRunning = false;
+            }
+        }
+
+        
     }
 }

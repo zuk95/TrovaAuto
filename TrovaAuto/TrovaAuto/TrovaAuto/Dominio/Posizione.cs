@@ -13,6 +13,8 @@ namespace TrovaAuto.Dominio
         public double Latitudine { get; set; }
         public double Longitudine { get; set; }
         public byte[] byteImmagine { get; set; }
+        public string NomeCitta { get; set; } = string.Empty;
+        public string Via { get; set; } = string.Empty;
 
     }
 }

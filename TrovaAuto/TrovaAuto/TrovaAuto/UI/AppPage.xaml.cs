@@ -43,9 +43,14 @@ namespace TrovaAuto.UI
             {
                 Posizione ultimaPosSalvata = await device.GetUltimaPosizioneSalvata();
                 if (ultimaPosSalvata != null)
-                    dataUltimaAcquisizioneLabel.Text = "Ultima acquisizione: " + ultimaPosSalvata.DataAcquisizione.ToString();
+                {
+                    dataUltimaAcquisizioneLabel.Text = $"Piu recente: {ultimaPosSalvata.DataAcquisizione.ToString("dd/MM/yyyy hh:mm")}";
+                    //localitaUltimaAcquisizioneLabel.Text = $"{ultimaPosSalvata.NomeCitta} {ultimaPosSalvata.Via}";
+                }
                 else
-                    dataUltimaAcquisizioneLabel.Text = "Ultima acquisizione: Nessuna acquisizione";
+                {
+                    dataUltimaAcquisizioneLabel.Text = "Piu recente: Nessuna acquisizione";
+                }
             }
             catch (Exception ex)
             {
@@ -80,6 +85,12 @@ namespace TrovaAuto.UI
             try
             {
                 Posizione pos = await device.GetUltimaPosizioneSalvata();
+                if(pos == null)
+                {
+                    await DisplayAlert("Attenzione", $"Nessuna posizione salvata", "OK");
+                    return;
+                }
+
                 await Navigation.PushAsync(new MappaPage(pos));
             }
             catch (Exception ex)

@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              mc:Ignorable="d"
-             x:Class="TrovaAuto.UI.AppPage" Title="Trova Auto">
+             x:Class="TrovaAuto.UI.AppPage" Title="DimenticAuto">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cronologia" Clicked="ToolbarItem_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -42,6 +42,7 @@
                         <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2">
                             <Label x:Name="acquisiciPosizioneLabel" TextColor="White" Text="Acquisisci la posizione attuale" FontSize="Medium" FontAttributes="Italic"></Label>
                             <Label x:Name="dataUltimaAcquisizioneLabel" FontSize="Small" TextColor="White"></Label>
+                            <!--<Label x:Name="localitaUltimaAcquisizioneLabel" FontSize="Small" TextColor="White"></Label>-->
                         </StackLayout>
                         <Image x:Name="gpsImage" Grid.Column="2"></Image>
                     </Grid>
@@ -62,6 +63,7 @@
                         
                         <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                             <Label x:Name="visualizzaMappaLabel" TextColor="White" Text="Trova la mia auto" FontSize="Medium" FontAttributes="Italic"></Label>
+                            <Label Text="Da ultima posizione acquisita" FontSize="Small" FontAttributes="Bold" TextColor="#DAA520"></Label>
                         </StackLayout>
                         <Image x:Name="carImage" Grid.Column="2"></Image>
                     </Grid>
@@ -82,7 +84,7 @@
                         
                         <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.ColumnSpan="2">
                             <Label x:Name="impostazioniLabel" TextColor="White" Text="Configura l'applicazione" FontSize="Medium" FontAttributes="Italic"></Label>
-                            <Label FontSize="Small" TextColor="White" Text="e altro..."></Label>
+                            <Label FontSize="Small" TextColor="White" Text="E altro..."></Label>
                         </StackLayout>
                         <Image x:Name="settingsImage" Grid.Column="2"></Image>
                     </Grid>
