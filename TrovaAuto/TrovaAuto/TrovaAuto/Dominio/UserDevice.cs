@@ -19,33 +19,17 @@ namespace TrovaAuto.Dominio
             database = new PosizioneDatabase();
             impostazioniDatabase = new ImpostazioniDatabase();
         }
-        private byte[] ConvertStreamtoByte(Stream input)
-        {
-            using (var ms = new MemoryStream())
-            {
-                input.CopyTo(ms);
-                return ms.ToArray();
-            }
-        }
 
         public async Task AcquisisciPosizione()
         {
             try
             {
                 Posizione posizioneDaSalvare = await PosizioneCreator.AcquisisciPosizione();
-                Impostazioni impostazioni = await GetImpostazioni();
-                if (impostazioni.AcquisizioneConFoto)
-                {
-                    Stream fotoStream = await FotoCreator.ScattaFoto();
-                    if(fotoStream != null)
-                        posizioneDaSalvare.byteImmagine = ConvertStreamtoByte(fotoStream);
-                }
-
                 await database.SalvaPosizioneAsync(posizioneDaSalvare);
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception("Acquisizione posizione non riuscita", ex);
             }
         }
 

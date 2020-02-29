@@ -14,10 +14,12 @@ namespace TrovaAuto.Dominio
                 GeolocationRequest geoRequestOptions = new GeolocationRequest(GeolocationAccuracy.Best,TimeSpan.FromSeconds(10));
                 Location location = await Geolocation.GetLocationAsync(geoRequestOptions);
 
-                Posizione p = new Posizione();
-                p.Latitudine = location.Latitude;
-                p.Longitudine = location.Longitude;
-                p.DataAcquisizione = DateTime.Now;
+                Posizione p = new Posizione
+                {
+                    Latitudine = location.Latitude,
+                    Longitudine = location.Longitude,
+                    DataAcquisizione = DateTime.Now
+                };
                 var placemarks = await Geocoding.GetPlacemarksAsync(p.Latitudine, p.Longitudine);
                 var placemark = placemarks?.FirstOrDefault();
                 if(placemark != null)

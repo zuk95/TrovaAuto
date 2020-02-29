@@ -19,12 +19,47 @@
                 </gradient:SfGradientView.BackgroundBrush>
             </gradient:SfGradientView>
             
-            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="20,0,20,0">
             <Image x:Name="successIcon" HeightRequest="40" WidthRequest="40"></Image>
-            <Label Text="Posizione acquisita correttamente!" TextColor="White"
+            <Label Text="Posizione acquisita correttamente!" TextColor="White" FontSize="Medium"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+                
+                <Frame x:Name="allegaFotoFrame" BackgroundColor="#DAA520" CornerRadius="10" Margin="0,20">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_faifoto"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <ActivityIndicator x:Name="indicatore" Color="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0"></ActivityIndicator>
+
+                        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Label Text="Allega foto" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"></Label>
+                        <Image x:Name="successFotoIcon" HeightRequest="40" WidthRequest="40" IsVisible="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"></Image>
+                    </StackLayout>
+
+                    </Grid>
+                </Frame>
+
+                <!--<Frame x:Name="notaFrame" BackgroundColor="#DAA520" CornerRadius="10" Margin="0,20">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <ActivityIndicator x:Name="indicatoreNota" Color="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Row="0"></ActivityIndicator>
+
+                        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Entry x:Name="entryNota" Placeholder="Scrivi una nota" ></Entry>
+                            <Image x:Name="successNotaIcon" HeightRequest="40" WidthRequest="40" IsVisible="False" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"></Image>
+                        </StackLayout>
+
+                    </Grid>
+                </Frame>-->
+            </StackLayout>
 
         </Grid>
     </ContentPage.Content>

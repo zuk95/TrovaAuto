@@ -18,14 +18,10 @@
                     </gradient:SfLinearGradientBrush>
                 </gradient:SfGradientView.BackgroundBrush>
             </gradient:SfGradientView>
-            
-            
-            
+
+
+
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <StackLayout Orientation="Horizontal" Margin="20,20">
-                    <CheckBox x:Name="checkBoxConFoto" Color="White"></CheckBox>
-                    <Label Text="Acquisizione con foto in allegato" FontSize="Medium" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Italic"></Label>
-                </StackLayout>
                 <StackLayout Orientation="Horizontal" Margin="23,20">
                     <Picker x:Name="pickerNumeroAcquisizioniDaTenere"  TextColor="Black" BackgroundColor="White" WidthRequest="30" ></Picker>
                     <Label Text="Numero acquisizioni massime" TextColor="White" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Italic"></Label>

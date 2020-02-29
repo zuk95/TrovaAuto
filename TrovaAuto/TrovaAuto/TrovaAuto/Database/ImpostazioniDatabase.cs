@@ -28,7 +28,7 @@ namespace TrovaAuto.Database
             List<Impostazioni> tmp = await GetImpostazioniAsync();
             if(tmp.Count == 0)
             {
-                Impostazioni impostazioniDefault = new Impostazioni() { IdImpostazione = 1 , AcquisizioneConFoto = false, NumeroAcquisizioniMassimo = 20 };
+                Impostazioni impostazioniDefault = new Impostazioni() { IdImpostazione = 1 , NumeroAcquisizioniMassimo = 20 };
                 await Database.InsertAsync(impostazioniDefault);
             }
         }

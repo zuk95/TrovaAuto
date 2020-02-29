@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TrovaAuto.Database;
 using TrovaAuto.Dominio;
 using Xamarin.Forms;
@@ -46,7 +43,6 @@ namespace TrovaAuto.UI
                     return;
                 }
                 impostazioni = tmp[0];
-                checkBoxConFoto.IsChecked = impostazioni.AcquisizioneConFoto;
                 pickerNumeroAcquisizioniDaTenere.SelectedIndex = (impostazioni.NumeroAcquisizioniMassimo - 1);
                 //checkBoxConTimer.IsChecked = impostazioni.AcquisizioneConTimer;
             }
@@ -62,7 +58,6 @@ namespace TrovaAuto.UI
 
             try
             {
-                impostazioni.AcquisizioneConFoto = checkBoxConFoto.IsChecked;
                 impostazioni.NumeroAcquisizioniMassimo = Convert.ToInt32( pickerNumeroAcquisizioniDaTenere.SelectedItem);
                 await database.SalvaImpostazioniAsync(impostazioni);
             }
