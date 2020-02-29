@@ -19,7 +19,9 @@ android.support.v7.widget.Toolbar;C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\Tro
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
+bitmap;obj\Debug\90\res\drawable\splash_background.xml
 cache-path;C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+color;obj\Debug\90\res\drawable\splash_background.xml
 color;obj\Debug\90\res\values\colors.xml
 external-cache-path;C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-files-path;obj\Debug\90\res\xml\file_paths.xml
@@ -28,7 +30,9 @@ foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
 FrameLayout;C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\lp\49\jl\res\layout\bottomtablayout.xml
 item;C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\lp\49\jl\res\values\styles.xml
+item;obj\Debug\90\res\drawable\splash_background.xml
 item;obj\Debug\90\res\values\styles.xml
+layer-list;obj\Debug\90\res\drawable\splash_background.xml
 LinearLayout;C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\lp\49\jl\res\layout\bottomtablayout.xml
 paths;C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\lp\47\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 paths;obj\Debug\90\res\xml\file_paths.xml

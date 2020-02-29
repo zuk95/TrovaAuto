@@ -18,7 +18,7 @@
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
     </provider>
     <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBCiHJz8D8sutRCwu0CPUu3kFHNFKSUqQw" />
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="TrovaAuto" android:theme="@style/MainTheme" android:name="crc6411b46d8bfc670980.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="TrovaAuto" android:theme="@style/MyTheme.Splash" android:name="crc6411b46d8bfc670980.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

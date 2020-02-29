@@ -1223,3 +1223,5 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\drawable\splash_background.xml
