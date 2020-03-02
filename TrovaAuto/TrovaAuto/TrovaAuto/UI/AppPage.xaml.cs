@@ -44,7 +44,7 @@ namespace TrovaAuto.UI
                 Posizione ultimaPosSalvata = await device.GetUltimaPosizioneSalvata();
                 if (ultimaPosSalvata != null)
                 {
-                    dataUltimaAcquisizioneLabel.Text = $"Piu recente: {ultimaPosSalvata.DataAcquisizione.ToString("dd/MM/yyyy hh:mm")}";
+                    dataUltimaAcquisizioneLabel.Text = $"Piu recente: {ultimaPosSalvata.DataAcquisizione.ToString("dd/MM/yyyy HH:mm")}";
                     //localitaUltimaAcquisizioneLabel.Text = $"{ultimaPosSalvata.NomeCitta} {ultimaPosSalvata.Via}";
                 }
                 else

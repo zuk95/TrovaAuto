@@ -42,7 +42,7 @@
 
                         <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2">
                             <Label FontSize="Large" FontAttributes="Bold" TextColor="#DAA520" Text="Ultima posizione"></Label>
-                            <Label TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:dd MMMM yyyy  hh:mm}'}" FontSize="Medium" FontAttributes="Bold"></Label>
+                            <Label TextColor="White" Text="{Binding DataAcquisizione , StringFormat='{0:dd MMMM yyyy  HH:mm}'}" FontSize="Medium" FontAttributes="Bold"></Label>
                             <Label FontSize="Small" TextColor="White" Text="{Binding NomeCitta}"></Label>
                             <Label FontSize="Small" TextColor="White" Text="{Binding Via}"></Label>
                         </StackLayout>
@@ -64,7 +64,7 @@
                                     </Grid.ColumnDefinitions>
                                 
                                     <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2">
-                                        <Label TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:dd MMMM yyyy  hh:mm}'}" FontSize="Medium" FontAttributes="Bold"></Label>
+                                        <Label TextColor="White" Text="{Binding DataAcquisizione, StringFormat='{0:dd MMMM yyyy  HH:mm}'}" FontSize="Medium" FontAttributes="Bold"></Label>
                                         <Label FontSize="Small" TextColor="White" Text="{Binding NomeCitta}"></Label>
                                         <Label FontSize="Small" TextColor="White" Text="{Binding Via}"></Label>
                                     </StackLayout>

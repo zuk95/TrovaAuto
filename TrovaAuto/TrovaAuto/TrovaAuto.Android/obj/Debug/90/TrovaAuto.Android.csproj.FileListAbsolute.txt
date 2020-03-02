@@ -642,11 +642,6 @@ C:\Users\la2\source\repos\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\sta
 C:\Users\la2\source\repos\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\la2\source\repos\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\la2\source\repos\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\build.props
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\adb.props
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\TrovaAuto.Android.csprojAssemblyReference.cache
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\bin\Debug\TrovaAuto.Android.dll
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\bin\Debug\TrovaAuto.Android.pdb
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\bin\Debug\com.companyname.trovaauto.apk
@@ -654,6 +649,11 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\bin\Debug\com.compa
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\bin\Debug\com.companyname.trovaauto-Signed.apk
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\bin\Debug\TrovaAuto.dll
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\bin\Debug\TrovaAuto.pdb
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\build.props
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\adb.props
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\TrovaAuto.Android.csprojAssemblyReference.cache
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\XbdMerge\Xamarin.GooglePlayServices.Basement.dll.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\XbdMerge\Xamarin.GooglePlayServices.Base.dll.stamp
@@ -725,6 +725,7 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mi
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\xml\file_paths.xml
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\drawable\splash_background.xml
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\uploadflags.txt
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
@@ -1224,4 +1225,8 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\drawable\splash_background.xml
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-hdpi\mainicon.png
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-mdpi\mainicon.png
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xhdpi\mainicon.png
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xxhdpi\mainicon.png
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xxxhdpi\mainicon.png

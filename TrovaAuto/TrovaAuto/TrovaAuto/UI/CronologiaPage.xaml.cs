@@ -66,6 +66,9 @@ namespace TrovaAuto.UI
             try
             {
                 Posizione p = (sender as Frame).BindingContext as Posizione;
+                if (p == null)
+                    return;
+
                 await Navigation.PushAsync(new MappaPage(p));
             }
             catch (Exception ex)
