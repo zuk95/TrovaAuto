@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TrovaAuto.Database;
 using TrovaAuto.Dominio;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -67,8 +68,10 @@ namespace TrovaAuto.UI
             }
         }
 
-        private async void buttonPulisciAcquisizioni_Clicked(object sender, EventArgs e)
+        private async void PulisciAcquisizioni_Tapped(object sender, EventArgs e)
         {
+            indicatorePulisicposizioni.IsEnabled = true;
+            indicatorePulisicposizioni.IsRunning = true;
             PosizioneDatabase dbPosizione = new PosizioneDatabase();
             try
             {
@@ -83,6 +86,37 @@ namespace TrovaAuto.UI
             {
                 await DisplayAlert("ERRORE", $"Problema nell'eliminazione delle posizioni: {ex.Message}", "OK");
             }
+            finally
+            {
+                indicatorePulisicposizioni.IsEnabled = false;
+                indicatorePulisicposizioni.IsRunning = false;
+            }
         }
+
+        private async void TapGestureRecognizer_Tapped_donazioneFrame(object sender, EventArgs e)
+        {
+            indicatoreDonazione.IsEnabled = true;
+            indicatoreDonazione.IsRunning = true;
+
+            try
+            {
+                bool risposta = await DisplayAlert("Nota", "L'indirizzo email a cui dovrai offrire il caffè comparirà nella barra in alto", "OK", "ANNULLA");
+                if (!risposta)
+                    return;
+
+                //await Clipboard.SetTextAsync(CostantiDominio.EMAIL_FATTURAZIONE_DONAZIONE);
+                await Navigation.PushAsync(new DonazionePage());
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("ERRORE", $"Problema nell'apertura di paypal: {ex.Message}", "OK");
+            }
+            finally
+            {
+                indicatoreDonazione.IsEnabled = false;
+                indicatoreDonazione.IsRunning = false;
+            }
+        }
+
     }
 }

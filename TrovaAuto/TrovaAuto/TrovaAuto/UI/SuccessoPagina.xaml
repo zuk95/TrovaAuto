@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              mc:Ignorable="d"
-             x:Class="TrovaAuto.UI.SuccessoPagina">
+             x:Class="TrovaAuto.UI.SuccessoPagina" Title="Riepilogo">
     <ContentPage.Content>
         <Grid>
             <gradient:SfGradientView>

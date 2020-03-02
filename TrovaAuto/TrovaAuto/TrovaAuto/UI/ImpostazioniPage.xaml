@@ -22,13 +22,58 @@
 
 
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                <StackLayout Orientation="Horizontal" Margin="23,20">
-                    <Picker x:Name="pickerNumeroAcquisizioniDaTenere"  TextColor="Black" BackgroundColor="White" WidthRequest="30" ></Picker>
-                    <Label Text="Numero acquisizioni massime" TextColor="White" FontSize="Medium" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Italic"></Label>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" Margin="20,20">
-                    <Button x:Name="buttonPulisciAcquisizioni" Text="Pulisci posizioni acquisite" BackgroundColor="White" Clicked="buttonPulisciAcquisizioni_Clicked" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Button>
-                </StackLayout>
+
+                <Frame x:Name="numeroAcquisizioniFrame" HeightRequest="50" BackgroundColor="#987654" CornerRadius="10" Margin="20,0,20,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        
+                            <Label Text="Numero acquisizioni massime" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+                            <Picker x:Name="pickerNumeroAcquisizioniDaTenere" Grid.Column="2" TextColor="Black" BackgroundColor="White" WidthRequest="40" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" ></Picker>
+                        
+                        <!--<Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>-->
+                    </Grid>
+                </Frame>
+
+                <Frame x:Name="pulisciposizioniFrame" HeightRequest="50" BackgroundColor="#987654" CornerRadius="10" Margin="20,0,20,0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PulisciAcquisizioni_Tapped"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <ActivityIndicator x:Name="indicatorePulisicposizioni" Color="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1"></ActivityIndicator>
+
+                            <Label Text="Pulisci posizioni acquisite" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+                        <!--<Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>-->
+                    </Grid>
+                </Frame>
+
+                <Frame x:Name="donazioneFrame" HeightRequest="50" BackgroundColor="#987654" CornerRadius="10" Margin="20,0,20,0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_donazioneFrame"></TapGestureRecognizer>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <ActivityIndicator x:Name="indicatoreDonazione" Color="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1"></ActivityIndicator>
+
+                            <Label Text="Offrimi un caffè" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+                        <!--<Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>-->
+                    </Grid>
+                </Frame>
                 <!--<StackLayout Orientation="Horizontal" Margin="20,20">
                     <CheckBox x:Name="checkBoxConTimer" Color="White"></CheckBox>
                     <Label Text="Acquisizione con timer" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Italic"></Label>
