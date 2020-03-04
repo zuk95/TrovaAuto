@@ -6,6 +6,22 @@
              mc:Ignorable="d"
              x:Class="TrovaAuto.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <!--<gradient:SfGradientView x:Key="sfondoPagine">
+                <gradient:SfGradientView.BackgroundBrush>
+                    <gradient:SfLinearGradientBrush>
+                        <gradient:SfLinearGradientBrush.GradientStops>
+                            <gradient:SfGradientStop Color="#8b4513" Offset="0.0" />
+                            <gradient:SfGradientStop Color="#DAA520" Offset="1.0" />
+                        </gradient:SfLinearGradientBrush.GradientStops>
+                    </gradient:SfLinearGradientBrush>
+                </gradient:SfGradientView.BackgroundBrush>
+            </gradient:SfGradientView>-->
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

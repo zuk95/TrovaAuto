@@ -13,7 +13,7 @@ namespace TrovaAuto.UI
     public partial class AppPage : ContentPage
     {
         private UserDevice device;
-        private PermessiManager permessiManager;
+        private IPermessiManager permessiManager;
         public AppPage()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace TrovaAuto.UI
             {
                 bool risposta = await DisplayAlert("Nota", permessiManager.GetMessaggioForPermesso(permission), "Si","No");
                 if (risposta)
-                    CrossPermissions.Current.OpenAppSettings();
+                    permessiManager.ApriImpostazioni();
 
                 return false;
             }

@@ -23,8 +23,8 @@
                 </gradient:SfGradientView.BackgroundBrush>
             </gradient:SfGradientView>
 
-            
-            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <ScrollView>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 
                 <Frame HeightRequest="100" BackgroundColor="#987654" CornerRadius="5">
                     <Frame.GestureRecognizers>
@@ -91,7 +91,7 @@
                 </Frame>
                 
             </StackLayout>
-            
+            </ScrollView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

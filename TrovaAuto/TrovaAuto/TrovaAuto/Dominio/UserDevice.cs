@@ -27,9 +27,9 @@ namespace TrovaAuto.Dominio
                 Posizione posizioneDaSalvare = await PosizioneCreator.AcquisisciPosizione();
                 await database.SalvaPosizioneAsync(posizioneDaSalvare);
             }
-            catch (Exception ex)
+            catch (FeatureNotEnabledException ex)
             {
-                throw new Exception($"Acquisizione posizione non riuscita:{ex.Message}", ex);
+                throw new Exception($"Acquisizione posizione non riuscita: Attiva il gps sul tuo dispositivo", ex);
             }
         }
 

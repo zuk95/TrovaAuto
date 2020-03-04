@@ -7,7 +7,7 @@ using Plugin.Permissions.Abstractions;
 
 namespace TrovaAuto.Dominio
 {
-    public class PermessiManager
+    public class PermessiManager : IPermessiManager
     {
         private Permission[] permessi = new Permission[]
             {
@@ -51,6 +51,11 @@ namespace TrovaAuto.Dominio
                 case Permission.Storage: return "La memoria del dispositivo è utilizzata per salvare le foto che scatti in fase di acquisizione della posizione e per mandarti delle notifiche allo scadere dei timer che imposti. Vuoi aprire le impostazioni per consentirlo?";
                 default: return permesso.ToString() + " non necessario";
             }
+        }
+
+        public bool ApriImpostazioni()
+        {
+            return CrossPermissions.Current.OpenAppSettings();
         }
     }
 }
