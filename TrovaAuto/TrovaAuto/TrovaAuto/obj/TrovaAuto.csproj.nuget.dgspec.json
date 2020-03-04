@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[4.0.1.5, )"
             },
+            "Xam.Plugins.Notifier": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.4.0, )"

@@ -42,6 +42,36 @@ namespace TrovaAuto.Dominio
                 return null;
         }
 
+        public async Task<bool> ScattaFoto()
+        {
+            Posizione posizioneDaAggiornare = await this.GetUltimaPosizioneSalvata();
+            Stream fotoStream = await FotoCreator.ScattaFoto();
+            if (fotoStream != null)
+            {
+                posizioneDaAggiornare.byteImmagine = ConvertStreamtoByte(fotoStream);
+                PosizioneDatabase dbPos = new PosizioneDatabase();
+                await dbPos.SalvaPosizioneAsync(posizioneDaAggiornare);
+                return true;
+            }
+
+            return false;
+        }
+
+        public async Task ImpostaTimer(int ore,int minuti)
+        {
+            Posizione posizioneAssociata = await this.GetUltimaPosizioneSalvata();
+            TimerCreator.ImpostaTimer(posizioneAssociata, ore, minuti);
+        }
+
+        private byte[] ConvertStreamtoByte(Stream input)
+        {
+            using (var ms = new MemoryStream())
+            {
+                input.CopyTo(ms);
+                return ms.ToArray();
+            }
+        }
+
         private async Task<Impostazioni> GetImpostazioni()
         {
             List<Impostazioni> tmp = await impostazioniDatabase.GetImpostazioniAsync();

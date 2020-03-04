@@ -25,9 +25,9 @@ namespace TrovaAuto.UI
 
         private void inizializzaElementiPagina()
         {
-            gpsImage.Source = ImageSource.FromResource("TrovaAuto.ImmaginiCondivise.posizioneimage.png");
-            carImage.Source = ImageSource.FromResource("TrovaAuto.ImmaginiCondivise.cari.png");
-            settingsImage.Source = ImageSource.FromResource("TrovaAuto.ImmaginiCondivise.settings.png");
+            gpsImage.Source = ImageSource.FromResource(CostantiDominio.PATH_POSITION_ICON);
+            carImage.Source = ImageSource.FromResource(CostantiDominio.PATH_CAR_ICON);
+            settingsImage.Source = ImageSource.FromResource(CostantiDominio.PATH_SETTINGS_ICON);
         }
         private void SettaIndicatore(ActivityIndicator indicatore,bool valore)
         {

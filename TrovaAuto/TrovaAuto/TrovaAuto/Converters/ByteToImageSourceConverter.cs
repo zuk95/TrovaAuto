@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using TrovaAuto.Dominio;
 using Xamarin.Forms;
 
 namespace TrovaAuto.Converters
@@ -14,7 +15,7 @@ namespace TrovaAuto.Converters
             byte[] byteImmagine = value as byte[];
 
             if(byteImmagine == null)
-                return ImageSource.FromResource("TrovaAuto.ImmaginiCondivise.noimage.png");
+                return ImageSource.FromResource(CostantiDominio.PATH_NOIMAGE_ICON);
 
             var stream = new MemoryStream(byteImmagine);
             return ImageSource.FromStream(() => stream);

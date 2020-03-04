@@ -4802,9 +4802,10 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f0700a7;
     public static final int notification_tile_bg=0x7f0700a8;
     public static final int notify_panel_notification_icon_bg=0x7f0700a9;
-    public static final int splash_background=0x7f0700aa;
-    public static final int tooltip_frame_dark=0x7f0700ab;
-    public static final int tooltip_frame_light=0x7f0700ac;
+    public static final int plugin_lc_smallicon=0x7f0700aa;
+    public static final int splash_background=0x7f0700ab;
+    public static final int tooltip_frame_dark=0x7f0700ac;
+    public static final int tooltip_frame_light=0x7f0700ad;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

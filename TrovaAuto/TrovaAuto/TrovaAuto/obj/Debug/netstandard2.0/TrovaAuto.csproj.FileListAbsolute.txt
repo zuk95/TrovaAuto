@@ -30,6 +30,7 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\Tr
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\UI\AppPage.xaml.g.cs
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\UI\CronologiaPage.xaml.g.cs
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\UI\DonazionePage.xaml.g.cs
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\UI\ImmaginePage.xaml.g.cs
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\UI\ImpostazioniPage.xaml.g.cs
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\UI\MappaPage.xaml.g.cs
@@ -41,4 +42,3 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\Tr
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\TrovaAuto.dll
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\ref\TrovaAuto.dll
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\TrovaAuto.pdb
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Debug\netstandard2.0\UI\DonazionePage.xaml.g.cs

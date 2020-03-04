@@ -38,8 +38,8 @@
                         </Grid.ColumnDefinitions>
 
                         <ActivityIndicator x:Name="indicatoreGps" Color="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1"></ActivityIndicator>
-                        
-                        <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2">
+
+                        <StackLayout Orientation="Vertical" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                             <Label x:Name="acquisiciPosizioneLabel" TextColor="White" Text="Acquisisci la posizione attuale" FontSize="Medium" FontAttributes="Italic"></Label>
                             <Label x:Name="dataUltimaAcquisizioneLabel" FontSize="Small" TextColor="White"></Label>
                             <!--<Label x:Name="localitaUltimaAcquisizioneLabel" FontSize="Small" TextColor="White"></Label>-->

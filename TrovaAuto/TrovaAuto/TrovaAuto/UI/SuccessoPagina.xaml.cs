@@ -14,6 +14,8 @@ namespace TrovaAuto.UI
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SuccessoPagina : ContentPage
     {
+        private UserDevice device;
+
         public SuccessoPagina()
         {
             InitializeComponent();
@@ -22,26 +24,25 @@ namespace TrovaAuto.UI
 
         private void InizializzaElementiPagina()
         {
-            successIcon.Source = ImageSource.FromResource("TrovaAuto.ImmaginiCondivise.succesimage.png");
-            successFotoIcon.Source = ImageSource.FromResource("TrovaAuto.ImmaginiCondivise.succesimage.png");
+            successIcon.Source = ImageSource.FromResource(CostantiDominio.PATH_SUCCESS_ICON);
+            successFotoIcon.Source = ImageSource.FromResource(CostantiDominio.PATH_SUCCESS_ICON);
+            successTimerIcon.Source = ImageSource.FromResource(CostantiDominio.PATH_SUCCESS_ICON);
+            timer.Time = DateTime.Now.TimeOfDay;
         }
 
         private async void TapGestureRecognizer_Tapped_faifoto(object sender, EventArgs e)
         {
-            indicatore.IsVisible = true;
-            indicatore.IsRunning = true;
+            indicatoreFoto.IsVisible = true;
+            indicatoreFoto.IsRunning = true;
 
             try
             {
-                UserDevice device = new UserDevice();
-                Posizione posizioneDaAggiornare = await device.GetUltimaPosizioneSalvata();
-                Stream fotoStream = await FotoCreator.ScattaFoto();
-                if (fotoStream != null)
+                device = new UserDevice();
+                bool esito = await device.ScattaFoto();
+                if (esito)
                 {
-                    posizioneDaAggiornare.byteImmagine = ConvertStreamtoByte(fotoStream);
-                    PosizioneDatabase dbPos = new PosizioneDatabase();
-                    await dbPos.SalvaPosizioneAsync(posizioneDaAggiornare);
                     successFotoIcon.IsVisible = true;
+                    allegaFotoFrame.IsEnabled = false;
                 }
             }
             catch (Exception ex)
@@ -50,17 +51,31 @@ namespace TrovaAuto.UI
             }
             finally 
             {
-                indicatore.IsVisible = false;
-                indicatore.IsRunning = false;
+                indicatoreFoto.IsVisible = false;
+                indicatoreFoto.IsRunning = false;
             }
         }
 
-        private byte[] ConvertStreamtoByte(Stream input)
+        private async void TapGestureRecognizer_Tapped_impostaTimer(object sender, EventArgs e)
         {
-            using (var ms = new MemoryStream())
+            indicatoreTimer.IsVisible = true;
+            indicatoreTimer.IsRunning = true;
+            try
             {
-                input.CopyTo(ms);
-                return ms.ToArray();
+                device = new UserDevice();
+                await device.ImpostaTimer(timer.Time.Hours, timer.Time.Minutes);
+                timerFrame.IsVisible = false;
+                successTimerIcon.IsVisible = true;
+                impostaTimeFrame.IsEnabled = false;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("ERRORE", $"Impossibile impostare il timer: {ex.Message}", "OK");
+            }
+            finally
+            {
+                indicatoreTimer.IsVisible = false;
+                indicatoreTimer.IsRunning = false;
             }
         }
     }

@@ -26,6 +26,7 @@ namespace TrovaAuto.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::TrovaAuto.Droid.Resource.Drawable.plugin_lc_smallicon;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.Avatar1 = global::TrovaAuto.Droid.Resource.Drawable.Avatar1;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.Avatar10 = global::TrovaAuto.Droid.Resource.Drawable.Avatar10;
 			global::Syncfusion.XForms.Android.Core.Resource.Drawable.Avatar11 = global::TrovaAuto.Droid.Resource.Drawable.Avatar11;
@@ -6104,13 +6105,16 @@ namespace TrovaAuto.Droid
 			public const int notify_panel_notification_icon_bg = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int splash_background = 2131165348;
+			public const int plugin_lc_smallicon = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int tooltip_frame_dark = 2131165349;
+			public const int splash_background = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int tooltip_frame_light = 2131165350;
+			public const int tooltip_frame_dark = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int tooltip_frame_light = 2131165351;
 			
 			static Drawable()
 			{

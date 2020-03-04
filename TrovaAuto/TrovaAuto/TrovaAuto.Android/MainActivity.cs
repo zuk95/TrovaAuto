@@ -2,6 +2,7 @@
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Plugin.LocalNotifications;
 
 namespace TrovaAuto.Droid
 {
@@ -20,6 +21,10 @@ namespace TrovaAuto.Droid
 
             //Inizializzazione servizio delle mappe in android
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
+
+            //inizializzazione servizio notifiche
+            InizializzaServizioNotifica();
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -28,6 +33,11 @@ namespace TrovaAuto.Droid
             //Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private void InizializzaServizioNotifica()
+        {
+            LocalNotificationsImplementation.NotificationIconId = Resource.Mipmap.mainIcon;
         }
     }
 }
