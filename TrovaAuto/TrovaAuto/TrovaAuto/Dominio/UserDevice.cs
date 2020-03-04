@@ -29,7 +29,7 @@ namespace TrovaAuto.Dominio
             }
             catch (Exception ex)
             {
-                throw new Exception("Acquisizione posizione non riuscita", ex);
+                throw new Exception($"Acquisizione posizione non riuscita:{ex.Message}", ex);
             }
         }
 
@@ -44,23 +44,39 @@ namespace TrovaAuto.Dominio
 
         public async Task<bool> ScattaFoto()
         {
-            Posizione posizioneDaAggiornare = await this.GetUltimaPosizioneSalvata();
-            Stream fotoStream = await FotoCreator.ScattaFoto();
-            if (fotoStream != null)
-            {
-                posizioneDaAggiornare.byteImmagine = ConvertStreamtoByte(fotoStream);
-                PosizioneDatabase dbPos = new PosizioneDatabase();
-                await dbPos.SalvaPosizioneAsync(posizioneDaAggiornare);
-                return true;
-            }
 
-            return false;
+            try
+            {
+                Posizione posizioneDaAggiornare = await this.GetUltimaPosizioneSalvata();
+                Stream fotoStream = await FotoCreator.ScattaFoto();
+                if (fotoStream != null)
+                {
+                    posizioneDaAggiornare.byteImmagine = ConvertStreamtoByte(fotoStream);
+                    PosizioneDatabase dbPos = new PosizioneDatabase();
+                    await dbPos.SalvaPosizioneAsync(posizioneDaAggiornare);
+                    return true;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Acquisizione foto non riuscita:{ex.Message} ", ex);
+            }
+            
         }
 
         public async Task ImpostaTimer(int ore,int minuti)
         {
-            Posizione posizioneAssociata = await this.GetUltimaPosizioneSalvata();
-            TimerCreator.ImpostaTimer(posizioneAssociata, ore, minuti);
+            try
+            {
+                Posizione posizioneAssociata = await this.GetUltimaPosizioneSalvata();
+                TimerCreator.ImpostaTimer(posizioneAssociata, ore, minuti);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Acquisizione timer non riuscita:{ex.Message} ", ex);
+            }
         }
 
         private byte[] ConvertStreamtoByte(Stream input)

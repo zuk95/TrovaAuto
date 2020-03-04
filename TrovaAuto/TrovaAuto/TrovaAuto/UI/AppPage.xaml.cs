@@ -1,14 +1,11 @@
-﻿using Plugin.Media.Abstractions;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrovaAuto.Database;
 using TrovaAuto.Dominio;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.Permissions.Abstractions;
+using System.Threading.Tasks;
+using Plugin.Permissions;
 
 namespace TrovaAuto.UI
 {
@@ -16,11 +13,13 @@ namespace TrovaAuto.UI
     public partial class AppPage : ContentPage
     {
         private UserDevice device;
+        private PermessiManager permessiManager;
         public AppPage()
         {
             InitializeComponent();
             inizializzaElementiPagina();
             device = new UserDevice();
+            permessiManager = new PermessiManager();
         }
 
         private void inizializzaElementiPagina()
@@ -58,13 +57,32 @@ namespace TrovaAuto.UI
             }
         }
 
+        private async Task<bool> CheckPermessi()
+        {
+            List<Permission> permessiNonConsentiti = await permessiManager.ChiediPermessi();
+            //Se tutti sono consentiti la lista è a 0 e salta il foreach, altrimenti si ferma al primo echiede di settare i permessi dalle impostazioni
+            foreach (Permission permission in permessiNonConsentiti)
+            {
+                bool risposta = await DisplayAlert("Nota", permessiManager.GetMessaggioForPermesso(permission), "Si","No");
+                if (risposta)
+                    CrossPermissions.Current.OpenAppSettings();
+
+                return false;
+            }
+
+            return true;
+        }
 
         private async void TapGestureRecognizer_Tapped_acquisiciPosizione(object sender, EventArgs e)
         {
-            SettaIndicatore(indicatoreGps, true);
 
+            SettaIndicatore(indicatoreGps, true);
             try
             {
+                bool check = await CheckPermessi();
+                if (!check)
+                    return;
+
                 await device.AcquisisciPosizione();
                 await Navigation.PushAsync(new SuccessoPagina());
             }
@@ -84,6 +102,10 @@ namespace TrovaAuto.UI
 
             try
             {
+                bool check = await CheckPermessi();
+                if (!check)
+                    return;
+
                 Posizione pos = await device.GetUltimaPosizioneSalvata();
                 if(pos == null)
                 {
@@ -109,6 +131,10 @@ namespace TrovaAuto.UI
 
             try
             {
+                bool check = await CheckPermessi();
+                if (!check)
+                    return;
+
                 await Navigation.PushAsync(new ImpostazioniPage());
             }
             catch (Exception ex)
@@ -125,6 +151,10 @@ namespace TrovaAuto.UI
         {
             try
             {
+                bool check = await CheckPermessi();
+                if (!check)
+                    return;
+
                 await Navigation.PushAsync(new CronologiaPage());
             }
             catch (Exception ex)

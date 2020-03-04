@@ -14,7 +14,7 @@ namespace TrovaAuto.Dominio
         public Notifica(Posizione _posizioneAssociata)
         {
             IdNotifica = _posizioneAssociata.Id;
-            Messaggio = IdNotifica.ToString();//_posizioneAssociata.NomeCitta + " " + _posizioneAssociata.Via;
+            Messaggio = "Accedi all'app e trova la tua auto"; //a " + _posizioneAssociata.NomeCitta + " in " + _posizioneAssociata.Via;
         }
     }
 }

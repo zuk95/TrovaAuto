@@ -24,7 +24,7 @@ namespace TrovaAuto.UI
         private void InizializzaMappa()
         {
             Position position = new Position(this.posizione.Latitudine, this.posizione.Longitudine);
-            map.Pins.Add(new Pin() { Label = "La tua Auto", Position = position });
+            map.Pins.Add(new Pin() { Label = "La tua Auto", Position = position, Type= PinType.SavedPin });
             map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(1)).WithZoom(20));
         }
 

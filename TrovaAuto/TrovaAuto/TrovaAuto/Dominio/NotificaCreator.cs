@@ -9,14 +9,20 @@ namespace TrovaAuto.Dominio
 
         public void CreaNotifica(Posizione posizioneAssociata, DateTime dataNotifica)
         {
-            Notifica notifica = new Notifica(posizioneAssociata);
-            notifica.DataNotifica = dataNotifica;
-            SchedulaNotifica(notifica);
+            try
+            {
+                Notifica notifica = new Notifica(posizioneAssociata);
+                notifica.DataNotifica = dataNotifica;
+                SchedulaNotifica(notifica);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Problema con gestione notifica:{ex.Message}",ex);
+            }
         }
 
         public abstract void SchedulaNotifica(Notifica notifica);
         public abstract void CancellaNotifica(Posizione posizioneAssociata);
-
 
     }
 }
