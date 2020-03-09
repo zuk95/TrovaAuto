@@ -20,3 +20,4 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\TrovaAuto.dll
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\ref\TrovaAuto.dll
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\TrovaAuto.pdb
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\UI\DonazionePage.xaml.g.cs

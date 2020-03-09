@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:gradient ="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              mc:Ignorable="d"
-             x:Class="TrovaAuto.UI.AppPage" Title="DimenticAuto">
+             x:Class="TrovaAuto.UI.AppPage" Title="TrovAuto">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cronologia" Clicked="ToolbarItem_Clicked"></ToolbarItem>
     </ContentPage.ToolbarItems>

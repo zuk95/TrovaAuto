@@ -40,15 +40,14 @@ namespace TrovaAuto.UI
 
             ultimaPosizioneFrame.BindingContext = Posizioni[0];
             Posizioni.RemoveAt(0);
-            listaPosizioni.ItemsSource = Posizioni;
+            listaPosizioni.ItemsSource = list;
         }
 
-        private async void listaPosizioni_ItemTapped(object sender, SelectedItemChangedEventArgs e)
+        private async void listaPosizioni_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            
             try
             {
-                Posizione p = e.SelectedItem as Posizione;
+                Posizione p = e.Item as Posizione;
                 await Navigation.PushAsync(new MappaPage(p));
                 if (sender is ListView listView) listView.SelectedItem = null;
             }
