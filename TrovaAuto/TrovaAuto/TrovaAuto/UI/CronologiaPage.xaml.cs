@@ -40,7 +40,7 @@ namespace TrovaAuto.UI
 
             ultimaPosizioneFrame.BindingContext = Posizioni[0];
             Posizioni.RemoveAt(0);
-            listaPosizioni.ItemsSource = list;
+            listaPosizioni.ItemsSource = Posizioni;
         }
 
         private async void listaPosizioni_ItemTapped(object sender, ItemTappedEventArgs e)

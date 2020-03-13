@@ -57,7 +57,7 @@
                     </Grid>
                 </Frame>
 
-                <Frame x:Name="donazioneFrame" HeightRequest="50" BackgroundColor="#987654" CornerRadius="10" Margin="20,0,20,0">
+                <!--<Frame x:Name="donazioneFrame" HeightRequest="50" BackgroundColor="#987654" CornerRadius="10" Margin="20,0,20,0">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_donazioneFrame"></TapGestureRecognizer>
                     </Frame.GestureRecognizers>
@@ -70,14 +70,10 @@
 
                         <ActivityIndicator x:Name="indicatoreDonazione" Color="White" Opacity="0.5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1"></ActivityIndicator>
 
-                            <Label Text="Offrimi un caffè" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
-                        <!--<Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>-->
+                        <Label Text="Offrimi un caffè" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" FontSize="Medium" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"></Label>
+                        --><!--<Image Source="{Binding byteImmagine,Converter={StaticResource bytetoImage}}" Grid.Column="2"></Image>--><!--
                     </Grid>
-                </Frame>
-                <!--<StackLayout Orientation="Horizontal" Margin="20,20">
-                    <CheckBox x:Name="checkBoxConTimer" Color="White"></CheckBox>
-                    <Label Text="Acquisizione con timer" TextColor="White" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontAttributes="Italic"></Label>
-                </StackLayout>-->
+                </Frame>-->
             </StackLayout>
 
         </Grid>

@@ -93,30 +93,30 @@ namespace TrovaAuto.UI
             }
         }
 
-        private async void TapGestureRecognizer_Tapped_donazioneFrame(object sender, EventArgs e)
-        {
-            indicatoreDonazione.IsEnabled = true;
-            indicatoreDonazione.IsRunning = true;
+        //private async void TapGestureRecognizer_Tapped_donazioneFrame(object sender, EventArgs e)
+        //{
+        //    indicatoreDonazione.IsEnabled = true;
+        //    indicatoreDonazione.IsRunning = true;
 
-            try
-            {
-                bool risposta = await DisplayAlert("Nota", "L'indirizzo email a cui dovrai offrire il caffè comparirà nella barra in alto", "OK", "ANNULLA");
-                if (!risposta)
-                    return;
+        //    try
+        //    {
+        //        bool risposta = await DisplayAlert("Nota", "L'indirizzo email a cui dovrai offrire il caffè comparirà nella barra in alto", "OK", "ANNULLA");
+        //        if (!risposta)
+        //            return;
 
-                //await Clipboard.SetTextAsync(CostantiDominio.EMAIL_FATTURAZIONE_DONAZIONE);
-                await Navigation.PushAsync(new DonazionePage());
-            }
-            catch (Exception ex)
-            {
-                await DisplayAlert("ERRORE", $"Problema nell'apertura di paypal: {ex.Message}", "OK");
-            }
-            finally
-            {
-                indicatoreDonazione.IsEnabled = false;
-                indicatoreDonazione.IsRunning = false;
-            }
-        }
+        //        //await Clipboard.SetTextAsync(CostantiDominio.EMAIL_FATTURAZIONE_DONAZIONE);
+        //        await Navigation.PushAsync(new DonazionePage());
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        await DisplayAlert("ERRORE", $"Problema nell'apertura di paypal: {ex.Message}", "OK");
+        //    }
+        //    finally
+        //    {
+        //        indicatoreDonazione.IsEnabled = false;
+        //        indicatoreDonazione.IsRunning = false;
+        //    }
+        //}
 
     }
 }
