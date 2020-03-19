@@ -1,5 +1,6 @@
 ﻿using System;
 using TrovaAuto.Database;
+using TrovaAuto.Dominio;
 using TrovaAuto.UI;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +13,7 @@ namespace TrovaAuto
         public App()
         {
             InitializeComponent();
-
+            DependencyService.Get<INotificaCreator>().Inizializza();
             MainPage = new NavigationPage(new AppPage()) { BarBackgroundColor = Color.SaddleBrown, BarTextColor = Color.White };
         }
 

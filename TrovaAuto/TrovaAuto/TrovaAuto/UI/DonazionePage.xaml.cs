@@ -15,7 +15,7 @@ namespace TrovaAuto.UI
         public DonazionePage()
         {
             InitializeComponent();
-            this.Title = CostantiDominio.EMAIL_FATTURAZIONE_DONAZIONE;
+            //this.Title = CostantiDominio.EMAIL_FATTURAZIONE_DONAZIONE;
         }
     }
 }

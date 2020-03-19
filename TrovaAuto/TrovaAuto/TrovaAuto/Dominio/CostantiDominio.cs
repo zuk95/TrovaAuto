@@ -14,5 +14,6 @@ namespace TrovaAuto.Dominio
         public const string PATH_POSITION_ICON = "TrovaAuto.ImmaginiCondivise.posizioneimage.png";
         public const string PATH_SETTINGS_ICON = "TrovaAuto.ImmaginiCondivise.settings.png";
         public const string TITOLO_NOTIFICA = "Timer scaduto";
+        public const string MESSAGGIO_NOTIFICA = "Accedi all'app e trova la tua auto";
     }
 }
