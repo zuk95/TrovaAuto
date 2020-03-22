@@ -1,1 +1,1 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android"><item><color android:color="#DAA520" /></item><item><bitmap android:src="@mipmap/launcher_foreground" android:tileMode="disabled" android:gravity="center" /></item></layer-list>
+<bitmap android:src="@drawable/backgroundshape" android:tileMode="repeat" android:dither="true" xmlns:android="http://schemas.android.com/apk/res/android" />

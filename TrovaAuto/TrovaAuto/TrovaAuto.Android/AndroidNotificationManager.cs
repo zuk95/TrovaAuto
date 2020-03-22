@@ -17,6 +17,9 @@ using TrovaAuto.Dominio;
 [assembly: Dependency(typeof(TrovaAuto.Droid.AndroidNotificationManager))]
 namespace TrovaAuto.Droid
 {
+    /// <summary>
+    /// Implementazione nativa di InotificaCreator del PCL. Verrà utilizzata nel PCL utilizzando il DepencyService di Xamarin
+    /// </summary>
     public class AndroidNotificationManager : INotificaCreator
     {
         private const string channelId = "default";

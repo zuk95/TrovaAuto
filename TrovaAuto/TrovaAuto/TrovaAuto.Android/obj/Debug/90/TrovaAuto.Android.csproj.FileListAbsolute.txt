@@ -733,6 +733,8 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mi
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xhdpi\mainicon.png
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xxhdpi\mainicon.png
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\mipmap-xxxhdpi\mainicon.png
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\layout\splashlayout.xml
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\res\drawable\backgroundshape.png
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\uploadflags.txt
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
@@ -1187,6 +1189,8 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\androi
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc6434af9c19aa01b597\GoogleApiClientOnConnectionFailedListenerImpl.java
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc6414252951f3f66c67\RecyclerViewScrollListener_2.java
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc6411b46d8bfc670980\MainActivity.java
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc6411b46d8bfc670980\NotificationReceiver.java
+C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc6411b46d8bfc670980\SplashActivity.java
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc640f9a3bf7250ef269\ScheduledAlarmHandler.java
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc640879981a986d658b\SfGradientViewRenderer.java
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\com\google\android\gms\maps\R.java
@@ -1235,4 +1239,3 @@ C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\azucc\Desktop\TrovaAuto\TrovaAuto\TrovaAuto.Android\obj\Debug\90\android\src\crc6411b46d8bfc670980\NotificationReceiver.java

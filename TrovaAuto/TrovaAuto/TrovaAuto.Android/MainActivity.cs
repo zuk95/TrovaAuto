@@ -6,7 +6,7 @@ using Plugin.LocalNotifications;
 
 namespace TrovaAuto.Droid
 {
-    [Activity(Label = "TrovaAuto", Icon = "@mipmap/mainIcon", Theme = "@style/MainTheme", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Icon = "@mipmap/mainIcon", Theme = "@style/MainTheme", MainLauncher = false, LaunchMode = LaunchMode.SingleTop, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -22,7 +22,7 @@ namespace TrovaAuto.Droid
             //Inizializzazione servizio delle mappe in android
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
 
-            //inizializzazione servizio notifiche
+            //Inizializzazione servizio notifiche
             InizializzaServizioNotifica();
 
             //Per far funzionare correttamente il plugin dei permessi(vedere pagina github di PluginPermission)
@@ -30,6 +30,7 @@ namespace TrovaAuto.Droid
 
             LoadApplication(new App());
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             //Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

@@ -37,12 +37,11 @@ namespace TrovaAuto.Droid
                     .SetContentTitle(title)
                     .SetContentText(message)
                     .SetSmallIcon(Resource.Mipmap.mainIcon)
+                    .SetAutoCancel(true)
                     .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
 
             builder.SetContentIntent(pending);
-
             var notification = builder.Build();
-
             var manager = NotificationManager.FromContext(context);
             manager.Notify(idNotifica, notification);
         }
