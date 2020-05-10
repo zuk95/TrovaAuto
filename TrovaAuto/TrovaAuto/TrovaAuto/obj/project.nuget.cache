@@ -1,23 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "nPCWi+uyaMDNXQKYzjxgDB7AFDoxT1ndoWSOTYf6Kf8Ig9MImDOx1VqsLKlXxPEbNCH6dvf2HjBAilodl372eA==",
+  "dgSpecHash": "oPTzWiY2rGoWpkA+gjVQUIhnAhvsARhcRKDx0GVu8ly3+6aacckG7wnSkxUfJBjl9Z+XPucD6dxJJ3vM7c7bng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\azucc\\Desktop\\TrovaAuto-master\\TrovaAuto-master\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto.csproj",
+  "projectFilePath": "C:\\Users\\azucc\\Documents\\GitHub\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azucc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\azucc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\azucc\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
+    "C:\\Users\\azucc\\.nuget\\packages\\plugin.permissions\\3.0.0.12\\plugin.permissions.3.0.0.12.nupkg.sha512",
     "C:\\Users\\azucc\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
     "C:\\Users\\azucc\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
     "C:\\Users\\azucc\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
-    "C:\\Users\\azucc\\.nuget\\packages\\syncfusion.licensing\\18.1.0.48\\syncfusion.licensing.18.1.0.48.nupkg.sha512",
-    "C:\\Users\\azucc\\.nuget\\packages\\syncfusion.xamarin.core\\18.1.0.48\\syncfusion.xamarin.core.18.1.0.48.nupkg.sha512",
+    "C:\\Users\\azucc\\.nuget\\packages\\syncfusion.licensing\\17.4.0.51\\syncfusion.licensing.17.4.0.51.nupkg.sha512",
+    "C:\\Users\\azucc\\.nuget\\packages\\syncfusion.xamarin.core\\17.4.0.51\\syncfusion.xamarin.core.17.4.0.51.nupkg.sha512",
     "C:\\Users\\azucc\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\azucc\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\azucc\\.nuget\\packages\\xam.plugin.media\\4.0.1.5\\xam.plugin.media.4.0.1.5.nupkg.sha512",
     "C:\\Users\\azucc\\.nuget\\packages\\xam.plugins.notifier\\3.0.1\\xam.plugins.notifier.3.0.1.nupkg.sha512",
-    "C:\\Users\\azucc\\.nuget\\packages\\xamarin.essentials\\1.5.3.1\\xamarin.essentials.1.5.3.1.nupkg.sha512",
-    "C:\\Users\\azucc\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512",
-    "C:\\Users\\azucc\\.nuget\\packages\\xamarin.forms.maps\\4.6.0.726\\xamarin.forms.maps.4.6.0.726.nupkg.sha512"
+    "C:\\Users\\azucc\\.nuget\\packages\\xamarin.essentials\\1.4.0\\xamarin.essentials.1.4.0.nupkg.sha512",
+    "C:\\Users\\azucc\\.nuget\\packages\\xamarin.forms\\4.4.0.991640\\xamarin.forms.4.4.0.991640.nupkg.sha512",
+    "C:\\Users\\azucc\\.nuget\\packages\\xamarin.forms.maps\\4.4.0.991640\\xamarin.forms.maps.4.4.0.991640.nupkg.sha512"
   ],
   "logs": []
 }

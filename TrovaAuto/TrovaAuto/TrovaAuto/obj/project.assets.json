@@ -955,11 +955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\azucc\\Desktop\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto.csproj",
+      "projectUniqueName": "C:\\Users\\azucc\\Documents\\GitHub\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto.csproj",
       "projectName": "TrovaAuto",
-      "projectPath": "C:\\Users\\azucc\\Desktop\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto.csproj",
+      "projectPath": "C:\\Users\\azucc\\Documents\\GitHub\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto.csproj",
       "packagesPath": "C:\\Users\\azucc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\azucc\\Desktop\\TrovaAuto\\TrovaAuto\\TrovaAuto\\obj\\",
+      "outputPath": "C:\\Users\\azucc\\Documents\\GitHub\\TrovaAuto\\TrovaAuto\\TrovaAuto\\TrovaAuto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -1035,7 +1035,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

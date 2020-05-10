@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.trovaauto" android:installLocation="auto">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <uses-feature android:name="android.hardware.camera" android:required="false" />
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,13 +17,15 @@
     <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.companyname.trovaauto.fileprovider" android:exported="false" android:grantUriPermissions="true">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"></meta-data>
     </provider>
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBCiHJz8D8sutRCwu0CPUu3kFHNFKSUqQw" />
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/mainicon" android:label="TrovaAuto" android:theme="@style/MainTheme" android:name="crc6411b46d8bfc670980.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/mainicon" android:label="TrovaAuto" android:launchMode="singleTop" android:theme="@style/MainTheme" android:name="crc6411b46d8bfc670980.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+    <receiver android:name="crc6411b46d8bfc670980.NotificationReceiver" />
     <receiver android:enabled="true" android:label="Local Notifications Plugin Broadcast Receiver" android:name="crc640f9a3bf7250ef269.ScheduledAlarmHandler" />
     <activity android:configChanges="orientation|screenSize" android:name="crc646957603ea1820544.MediaPickerActivity" />
     <receiver android:enabled="true" android:exported="false" android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" />
