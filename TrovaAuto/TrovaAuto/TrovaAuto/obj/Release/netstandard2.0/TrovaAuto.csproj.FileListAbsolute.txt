@@ -25,7 +25,6 @@ C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\bin\Rele
 C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\bin\Release\netstandard2.0\TrovaAuto.dll
 C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\bin\Release\netstandard2.0\ref\TrovaAuto.dll
 C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\bin\Release\netstandard2.0\TrovaAuto.pdb
-C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\TrovaAuto.csprojAssemblyReference.cache
 C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\App.xaml.g.cs
 C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\UI\AppPage.xaml.g.cs
 C:\Users\azucc\Documents\GitHub\TrovaAuto\TrovaAuto\TrovaAuto\TrovaAuto\obj\Release\netstandard2.0\UI\CronologiaPage.xaml.g.cs
